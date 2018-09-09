@@ -1,0 +1,67 @@
+body{
+	max-width: 1200px;
+    margin: 0 auto;
+    width: 70%;
+    clear: both;
+    height: 100%;
+    background-color: #DCDCDC;
+    padding-top: 30px ; 
+    margin: 0 auto;
+    padding-top: 30px ; 
+    font-family: 'PT Sans', sans-serif;
+    font-size: 100%;
+    text-align: left;
+    line-height: 1.5;
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: #0AF73A 0px 0px 50px;}
+
+.header {
+	width: 100%;
+	background-image:url("images/webheader.jpg");
+}
+	
+.MainHeader {
+    background-color: #71B315;
+	background: url (images/webheader.jpg);
+    /* clearfix */
+    overflow: auto;
+	margin-top: 2% 0;}
+
+.MainHeader nav {
+	background-color: #2f3036;
+	height: 60px;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+	border-radius: 5px;
+    -webkit-border-radius: 5px;}
+
+.content {
+	margin-bottom: 2%}
+
+.MainHeader {margin-bottom: 2%;}
+
+.MainHeader img {
+    width: 20%; 
+    height: auto;}
+
+.MainHeader {
+    padding-top: 20px;
+	padding-bottom: 10px;}
+	
+.headertext {
+    display: inline;}
+
+.logo {
+    display: inline;
+    vertical-align:middle}
+
+#menu .MainHeader nav a:hover, .MainHeader nav a:active
+#menu .MainHeader nav .active a:link, .Mainheader nav .active a:visited {
+    background-color: ;
+	text-shadow: none;}
+
+.MainHeader nav ul li a {
+	border-radius: 5px;
+	-webkit-border-radius: 5px;}
