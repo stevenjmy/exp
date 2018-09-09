@@ -1,73 +1,29 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>Resize a Marker</title>
-    <link rel="stylesheet" href="http://openlayers.org/dev/theme/default/style.css" type="text/css" />
-    <link rel="stylesheet" href="http://openlayers.org/dev/examples/style.css" type="text/css" />
-    <script src="http://openlayers.org/api/OpenLayers.js"></script>
-    <script type="text/javascript">
-        var map, layer;
-        var size, icon;
-        function init(){
-            map = new OpenLayers.Map('map');
-            layer = new OpenLayers.Layer.WMS( "OpenLayers WMS",
-                "http://vmap0.tiles.osgeo.org/wms/vmap0", {layers: 'basic'} );
-            map.addLayer(layer);
-            var markers = new OpenLayers.Layer.Markers( "Markers" );
-            map.addLayer(markers);
-            size = new OpenLayers.Size(21, 25);
-            calculateOffset = function(size) {
-                        return new OpenLayers.Pixel(-(size.w/2), -size.h); };
-            icon = new OpenLayers.Icon(
-                'http://www.openlayers.org/dev/img/marker.png',
-                size, null, calculateOffset);
-            markers.addMarker(
-                new OpenLayers.Marker(new OpenLayers.LonLat(-71,40), icon));
-            map.addControl(new OpenLayers.Control.LayerSwitcher());
-            map.zoomToMaxExtent();
-        }
-        function resize() {
-            size = new OpenLayers.Size(size.w + 10, size.h + 10);
-            icon.setSize(size);
-        }
-        var map1, layer;
-        var size, icon;
-        function initone(){
-            map1 = new OpenLayers.map('map1');
-            layer = new OpenLayers.Layer.WMS( "OpenLayers WMS",
-                "http://vmap10.tiles.osgeo.org/wms/vmap10", {layers: 'basic'} );
-            map1.addLayer(layer);
-            var markers = new OpenLayers.Layer.Markers( "Markers" );
-            map1.addLayer(markers);
-            size = new OpenLayers.Size(21, 25);
-            calculateOffset = function(size) {
-                        return new OpenLayers.Pixel(-(size.w/2), -size.h); };
-            icon = new OpenLayers.Icon(
-                'http://www.openlayers.org/dev/img/marker.png',
-                size, null, calculateOffset);
-            markers.addMarker(
-                new OpenLayers.Marker(new OpenLayers.LonLat(-71,40), icon));
-            map1.addControl(new OpenLayers.Control.LayerSwitcher());
-            map1.zoomToMaxExtent();
-        }
-        function resize() {
-            size = new OpenLayers.Size(size.w + 10, size.h + 10);
-            icon.setSize(size);
-        }
-    </script>
-  </head>
-  <body onload="init();initone();">
-    <h1 id="title">Resize a Marker</h1>
-    <div id="tags">
-        animation, resizing, style, size
-    </div>
-    <div id="shortdesc">Dynamically resize a marker</div>
-    <div id="map" class="smallmap"></div>
-    <div id="map1" class="smallmap"></div>
-    <div id="docs">
-        This example shows how to create a OpenLayers.Layer.Markers layer, add an icon, put it into a marker, and add the marker to the layer.  Once the marker has been added it is possible to use setSize() on the icon in order to resize the marker.
-    </div>
-    <div style="background-color:purple" onclick="resize()"> click to resize marker</div>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="en"> 
+	<head>
+		<meta charset="utf-8"/>
+		<title> My Green Energy Home Page </title>
+		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Signika:400,600'>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" media="only screen and (min-width: 1000px)" href="css/desktop.css"/>
+		<link rel="stylesheet" type="text/css" media="only screen and (min-width: 500px) and (max-width: 999px)" href="css/tablet.css">
+		<link rel="stylesheet" type="text/css" media="handheld, only screen and (max-width: 499px), only screen and (max-device-width: 499px)" href="css/mobile.css"/>
+	</head>
+<body>
+<header class="MainHeader">
+	<img src="images/webheader.jpg" alt="Green energy header of grass and lightbulb" class="header-image"/>
+	<img src="images/greenenergy.png" alt="Green energy logo" width="25%" height="25%" class="logo"/>
+	<h1 class="headertext"> My Green Energy</h1>
+
+<nav>
+	<label for="show-menu" class="show-menu">Show Menu</label>
+	<input type="checkbox" id="show-menu" role="button">
+	<ul id="menu">
+		<li class="active"><a href="#">Home</a></li>
+		<li><a href="#">My Metre</a></li>
+		<li><a href="#">Customer Help</a></li>
+		<li><a href="#">Social Media</a></li>
+	</ul>
+</nav>
+</header>
